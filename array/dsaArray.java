@@ -10,6 +10,7 @@ public class dsaArray{
         while (continueInsertion) {
             if (current == n) {
                 System.out.println("ALERT!->Array is full");
+                sc.close();
                 return array;
             }
     
@@ -54,6 +55,7 @@ public class dsaArray{
 
                 case 4:
                     System.out.println("!EXITED from Insertion!");
+                    sc.close();
                     return array;
 
                 default:
@@ -63,6 +65,7 @@ public class dsaArray{
             System.out.println("To CONTINUE OR QUIT (Press 1)");
             continueInsertion = sc.nextInt() == 1;
         }
+        sc.close();
         return array;
     }    
      //DELETION METHOD
@@ -72,6 +75,7 @@ public class dsaArray{
         while (continueDeletion) {
             if (current == 0) {
                 System.out.println("ALERT!->Array is empty");
+                sc.close();
                 return array;
             }
     
@@ -113,6 +117,7 @@ public class dsaArray{
                     
                 case 4:
                     System.out.println("!EXITED from Deletion!:");
+                    sc.close();
                     return array;
     
                 default:
@@ -122,6 +127,7 @@ public class dsaArray{
             System.out.println("To CONTINUE OR QUIT (Press 1)");
             continueDeletion = sc.nextInt() == 1;
         }
+        sc.close();
         return array;
     }
    //SORTING METHOD
@@ -158,6 +164,7 @@ public class dsaArray{
                 break;  
         }
         System.out.println("! SORTED !");
+        sc.close();
         return array;
     }
 
@@ -208,5 +215,6 @@ public class dsaArray{
         System.out.println("Array has been created of size:"+size);
         System.out.println(" ");
         arrayFunction(array,size);
+        sc.close();
     }
 }
