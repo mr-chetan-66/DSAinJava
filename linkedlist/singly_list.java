@@ -149,9 +149,7 @@ public class singly_list {
                     System.out.println("Enter element after which you want to DELETE: ");
                     int dltitem1 = sc.nextInt();
                     Node ptr5 = head;
-                    Node pptr5 = null;
                     while (ptr5 != null && ptr5.data != dltitem1) {
-                        pptr5 = ptr5;
                         ptr5 = ptr5.next;
                     }
                     if (ptr5 == null || ptr5.next == null) {
