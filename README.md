@@ -41,8 +41,9 @@ This section contains the implementation of several fundamental data structures 
   - Sorting 
 - **Linked List**:
   - Singly Linked List
+  - Circular Singly Linked List
   - Doubly Linked List
-  - Circular Linked List
+  - Circular Doubly Linked List
 - **Stacks**:
   - Push
   - Pop
