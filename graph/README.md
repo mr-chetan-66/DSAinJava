@@ -10,6 +10,7 @@ This project implements fundamental operations on graphs, such as inserting edge
   - [Insert Edge](#insert-edge)
   - [Breadth-First Search (BFS)](#breadth-first-search-bfs)
   - [Depth-First Search (DFS)](#depth-first-search-dfs)
+  - [Cycle-Detection](#cycle-detection)
 - [Usage](#usage)
 - [How to Run](#how-to-run)
 - [License](#license)
@@ -40,6 +41,9 @@ BFS traverses the graph level by level, starting from a specified source vertex.
 
 ### Depth-First Search (DFS)
 DFS traverses the graph by exploring as far as possible along each branch before backtracking. It uses a stack to keep track of the nodes to visit.
+
+### Cycle Detection
+In an undirected graph, a cycle exists if you can reach a node that has already been visited, but it isn't the direct parent of the current node. This can be done using Depth-First Search (DFS).
 
 ## Usage
 To use the program, you need to input the number of vertices and edges. Then, provide pairs of vertices to define edges. After that, you can choose whether to perform BFS or DFS traversal from a specific source vertex.
