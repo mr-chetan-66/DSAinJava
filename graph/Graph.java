@@ -49,6 +49,30 @@ class GraphOperations {
             }
         }
     }
+    private boolean iscyclicutil(int node,boolean[] visited,int parent){
+        visited[node]=true;
+        for(int neighbour:adjacency.get(node)){
+            if(!visited[neighbour]){
+                if(iscyclicutil(neighbour, visited, node)){
+                    return true;
+                }
+            }else if(neighbour!=parent){
+                return true;
+            }
+        }
+        return false;
+    } 
+    public boolean iscyclic(int v){
+        boolean[] visited=new boolean[v];
+        for(int i=0;i<v;i++){
+            if(!visited[i]){
+                if(iscyclicutil(i,visited,-1)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 }
 public class Graph{
     public static void main(String[] args) {
@@ -90,6 +114,15 @@ public class Graph{
                 if (again!='y') {
                     repeat=false;
                 }
+            }
+        }
+        System.out.println("Do you want to cycle detection? (y/n)");
+        int cyc=sc.next().charAt(0);
+        if(cyc=='y'){
+            if(g.iscyclic(v)){
+                System.out.println("Cycle detected");
+            }else{
+                System.out.println("NO cycle detected");
             }
         }
         System.out.println("!FINISHED!");
